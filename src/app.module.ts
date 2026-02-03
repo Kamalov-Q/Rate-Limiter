@@ -15,7 +15,7 @@ import { ThrottlerStorageRedisService } from '@nest-lab/throttler-storage-redis'
     errorMessage: 'Wow! Slow Down!',
     storage: new ThrottlerStorageRedisService(),
     getTracker: (req: Record<string, any>, context: ExecutionContext) => {
-      console.log(req?.headers['x-tenant-id']);
+      console.log(req?.headers['x-tenant-id']); 
       return req?.headers['x-tenant-id'];
     },
     generateKey: (context: ExecutionContext, trackerString: string, throttlerName: string) => {
