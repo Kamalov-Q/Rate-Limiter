@@ -11,7 +11,7 @@ import { ThrottlerStorageRedisService } from '@nest-lab/throttler-storage-redis'
       { name: 'short', limit: 3, ttl: seconds(4), blockDuration: minutes(10) },
       { name: 'medium', limit: 10, ttl: seconds(30), blockDuration: minutes(20) },
       { name: 'long', limit: 20, ttl: seconds(60) }
-    ],
+    ], 
     errorMessage: 'Wow! Slow Down!',
     storage: new ThrottlerStorageRedisService(),
     getTracker: (req: Record<string, any>, context: ExecutionContext) => {
